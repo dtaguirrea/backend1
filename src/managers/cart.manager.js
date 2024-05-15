@@ -4,7 +4,7 @@ import {v4 as uuidv4} from "uuid"
 
 
 import ProductManager from "./product.manager.js"
-const ProductManager= new ProductManager(`${__dirname}/db/products.json`)
+const productManager= new ProductManager(`${__dirname}/db/products.json`)
 export default class CartManager {
     constructor(path){
         this.path = path
@@ -29,7 +29,7 @@ export default class CartManager {
                 products: []
             }
             const carts = await this.getAllCarts()
-            carts.push(product)
+            carts.push(cart)
             await fs.promises.writeFile(this.path,JSON.stringify(carts))
             return cart
         }   catch (error){
@@ -40,7 +40,7 @@ export default class CartManager {
     async getCartById(id){
         try {
             const carts = await this.getAllCarts()
-            const cart = cart.find((c)=> c.id ==id)
+            const cart = carts.find((c)=> c.id ==id)
             if (!cart) return null
             return cart
         }catch (error){
@@ -71,6 +71,7 @@ export default class CartManager {
         return cartExist
         } catch(error){
         console.log(error)
+        return { error: error.message }
         }
     }
 }

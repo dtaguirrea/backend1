@@ -51,7 +51,7 @@ export default class ProductManager {
             let productExist = await this.getProductById(id)
             if (!productExist) return null
             productExist = {...productExist,...obj}
-            const newArray = products.filer((u)=> u.id !== id)
+            const newArray = products.filter((u)=> u.id !== id)
             newArray.push(productExist)
             await fs.promises.writeFile(this.path, JSON.stringify(newArray))
             return productExist

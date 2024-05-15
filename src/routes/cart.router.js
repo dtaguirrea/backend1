@@ -9,7 +9,7 @@ router.post("/:idCart/product/:idProd",async (req,res,next)=>{
     try{
         const { idProd} = req.params
         const { idCart} = req.params
-        const responde = await cartManager.saveProductToCart(idCart,idProd)
+        const response = await cartManager.saveProductToCart(idCart,idProd)
         res.json(response)
     } catch (error){
         next(error)
