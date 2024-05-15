@@ -1,0 +1,27 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "primera pre entrega",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dtaguirrea/backend1.git"
+  },
+  "author": "Daniel Aguirre",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dtaguirrea/backend1/issues"
+  },
+  "homepage": "https://github.com/dtaguirrea/backend1#readme",
+  "dependencies": {
+    "express": "^4.19.2",
+    "morgan": "^1.10.0",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}
