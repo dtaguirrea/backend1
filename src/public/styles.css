@@ -1,0 +1,44 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.form-container {
+    width: 50%;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 8px;
+}
+
+th {
+    background-color: whitesmoke;
+    text-align: left;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+form input {
+    width: 100%;
+    padding: 8px;
+}
+
+form button {
+    background-color: green;
+    color: white;
+}
+
+table button{
+    background-color: red;
+    color: white;
+}
