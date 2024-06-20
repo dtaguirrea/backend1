@@ -1,14 +1,11 @@
 import { Router } from "express";
 const router = Router()
 
-import ProductManager from "../managers/product.manager.js";
-import {__dirname} from "../path.js"
-const productManager= new ProductManager(`${__dirname}/db/products.json`)
-
+import { ProductModel } from "../daos/mongodb/models/product.model.js";
 
 router.get("/",async (req,res)=>{
     try {
-        const products= await productManager.getProducts()
+        const products= await ProductModel.find()
         res.render('home',{products})
     } catch(error){
         console.log(error)

@@ -2,7 +2,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Tienda Pokemon</title>
     <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
@@ -13,10 +13,9 @@
                 <tr>
                     <th>Nombre</th>
                     <th>Descripcion</th>
-                    <th>Codigo</th>
                     <th>Precio</th>
                     <th>Stock</th>
-                    <th>Tipo</th>
+                    <th>Categoria</th>
                 </tr>
             </thead>
             <tbody id="product-table-body">
@@ -26,16 +25,12 @@
             <h2>Agregar Nuevo Producto</h2>
             <form id="add-product-form">
                 <div>
-                    <label for="title">Nuevo Titulo</label>
+                    <label for="title">Nuevo Nombre</label>
                     <input type="text" id="title" name="title"  required>
                 </div>
                 <div>
                     <label for="description">Nueva Descripcion</label>
                     <input type="text" id="description" name="description"  required>
-                </div>
-                <div>
-                    <label for="code">Nuevo Codigo</label>
-                    <input type="text" id="code" name="code" required>
                 </div>
                 <div>
                     <label for="price">Nuevo Precio</label>
@@ -46,8 +41,8 @@
                     <input type="number" id="stock" name="stock" required>
                 </div>
                 <div>
-                    <label for="category">Tipo</label>
-                    <input type="text" id="category" name="category" required>
+                    <label for="category">Categoria</label>
+                    <input type="text" id="category" name="category">
                 </div>
                 <button type="submit">Agregar nuevo producto</button>
             </form>
