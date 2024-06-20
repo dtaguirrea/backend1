@@ -41,9 +41,6 @@ export default class CartDaoMongoDB {
         _id: cartId,
         products: { $elemMatch: { product: prodId } }
       });
-      // return await CartModel.findOne(
-      //   { _id: cartId, 'products.product': prodId }
-      // )
     } catch (error) {
       throw new Error(error);
     }

@@ -6,7 +6,6 @@ export default class ProductDaoMongoDB {
       const filter = name ? { 'name': name } : {};
       let sortOrder = {};
       if(sort) sortOrder.price = sort === 'asc' ? 1 : sort === 'desc' ? -1 : null;
-      //{price: 1}
       const response = await ProductModel.paginate(filter, { page, limit, sort: sortOrder });
       return response;
     } catch (error) {
